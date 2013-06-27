@@ -27,7 +27,6 @@ class QLineEdit;
 namespace sr_rviz_selector
 {
 
-// BEGIN_TUTORIAL
 // Here we declare our new subclass of rviz::Panel.  Every panel which
 // can be added via the Panels/Add_New_Panel menu is a subclass of
 // rviz::Panel.
@@ -56,44 +55,22 @@ public:
   virtual void load( const rviz::Config& config );
   virtual void save( rviz::Config config ) const;
 
-  // Next come a couple of public Qt slots.
 public Q_SLOTS:
-  // The control area, DriveWidget, sends its output to a Qt signal
-  // for ease of re-use, so here we declare a Qt slot to receive it.
-  void setVel( float linear_velocity_, float angular_velocity_ );
-
-  // In this example setTopic() does not get connected to any signal
-  // (it is called directly), but it is easy to define it as a public
-  // slot instead of a private function in case it would be useful to
-  // some other user.
-  void setTopic( const QString& topic );
 
   // Here we declare some internal slots.
 protected Q_SLOTS:
-  // sendvel() publishes the current velocity values to a ROS
-  // topic.  Internally this is connected to a timer which calls it 10
+  // Update the count of selected items.
+  // Internally this is connected to a timer which calls it 10
   // times per second.
-  void sendVel();
-
-  // updateTopic() reads the topic name from the QLineEdit and calls
-  // setTopic() with the result.
-  void updateTopic();
+  void update();
 
   // Then we finish up with protected member variables.
 protected:
   // One-line text editor for entering the outgoing ROS topic name.
-  QLineEdit* output_topic_editor_;
-
-  // The current name of the output topic.
-  QString output_topic_;
-
-  // The ROS publisher for the command velocity.
-  ros::Publisher velocity_publisher_;
+  QLineEdit* selected_count_editor_;
 
   // The ROS node handle.
   ros::NodeHandle nh_;
-
-  // END_TUTORIAL
 };
 
 } // end namespace sr_rviz_selector
