@@ -1,0 +1,18 @@
+<package>
+  <description brief="sr_rviz_selector">
+
+     sr_rviz_selector - Simple RViz panel plugin. Shows selection counts.
+
+  </description>
+  <author>Mark Pitchless</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/sr_rviz_selector</url>
+  <depend package="rviz"/>
+  <export>
+      <rviz plugin="${prefix}/plugin_description.xml"/>
+  </export>
+
+</package>
+
+

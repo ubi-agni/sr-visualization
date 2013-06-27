@@ -1,0 +1,9 @@
+<library path="lib/libsr_rviz_selector">
+  <class name="sr_rviz_selector/SrSelector"
+         type="sr_rviz_selector::SrSelectorPanel"
+         base_class_type="rviz::Panel">
+    <description>
+      Panel that shows selection counts.
+    </description>
+  </class>
+</library>

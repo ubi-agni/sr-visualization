@@ -1,0 +1,9 @@
+/**
+\mainpage
+\htmlinclude manifest.html
+
+\b sr_rviz_selector
+
+Simple RViz panel plugin. Shows selection counts.
+
+*/
