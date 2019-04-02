@@ -640,7 +640,9 @@ class SrGuiControllerTuner(Plugin):
                             if param_name == "sign":
                                 check_box.setToolTip("Check if you want a negative sign\n"
                                                      "(if the motor is being driven\n the wrong way around).")
-
+                            if "antiwindup" in param_name:
+                                check_box.setToolTip("Check if you want the antiwindup to be activated")
+  
                             self._widget.tree_ctrl_settings.setItemWidget(
                                 motor_item, index_item, check_box)
 

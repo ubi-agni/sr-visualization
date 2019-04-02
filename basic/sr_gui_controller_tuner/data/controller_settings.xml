@@ -68,6 +68,7 @@
       <item name="Vel/D" type="Float"/>
       <item name="Vel/I_Clamp" type="Float"/>
       <item name="Vel/Max_Force" type="Float"/>
+      <item name="Vel/Antiwindup" type="Bool"/>
 
       <item name="Vel/Friction_Deadband" type="Float"/>
     </headers>
@@ -112,6 +113,7 @@
       <item name="Max_Force" type="Float"/>
       <item name="Velocity_Deadband" type="Float"/>
       <item name="Friction_Deadband" type="Float"/>
+      <item name="Antiwindup" type="Bool"/>
     </headers>
   </controller>
 
